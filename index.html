@@ -11,10 +11,7 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Cursor glow effect -->
     <div class="cursor-glow" id="cursorGlow"></div>
-    
-    <!-- Animated background particles -->
     <canvas id="particles"></canvas>
 
     <!-- Navigation -->
@@ -23,18 +20,15 @@
             <a href="#" class="logo">
                 <img src="Company.png" alt="Bleend Logo" class="logo-img">
             </a>
-            
             <div class="nav-links">
                 <a href="#inicio" class="nav-link active">Inicio</a>
                 <a href="#soluciones" class="nav-link">Soluciones</a>
                 <a href="#sobre-nosotros" class="nav-link">Sobre nosotros</a>
             </div>
-            
             <a href="#contacto" class="btn-cta">
                 <span class="btn-text">Escalar mi marca</span>
                 <span class="btn-shine"></span>
             </a>
-            
             <button class="mobile-menu-btn" id="mobileMenuBtn">
                 <span></span>
                 <span></span>
@@ -55,18 +49,15 @@
     <section class="hero" id="inicio">
         <div class="hero-content">
             <p class="operated-by" data-animate="fade-up">Operated by Bleend.</p>
-            
             <div class="main-title-wrapper" data-animate="scale-in">
                 <h1 class="main-title">
                     <span class="title-text">Construimos el motor <span class="title-highlight">digital</span></span>
                     <span class="title-glow"></span>
                 </h1>
             </div>
-            
             <h2 class="subtitle" data-animate="fade-up" data-delay="200">
                 Para que tu marca no deje de vender.
             </h2>
-            
             <p class="description" data-animate="fade-up" data-delay="400">
                 Diseño, automatización e infraestructura para emprendedores que buscan resultados.<br>
                 No excusas.
@@ -81,7 +72,6 @@
             <h2 class="section-title" data-animate="fade-up" data-delay="100">
                 Todo lo que necesitas para <span class="highlight">escalar</span>
             </h2>
-            
             <div class="solutions-grid">
                 <div class="solution-card" data-animate="fade-up" data-delay="200">
                     <div class="card-icon">
@@ -96,7 +86,6 @@
                     <h3 class="card-title">Diseño Web Premium</h3>
                     <p class="card-desc">Interfaces modernas que convierten visitantes en clientes</p>
                 </div>
-                
                 <div class="solution-card" data-animate="fade-up" data-delay="300">
                     <div class="card-icon">
                         <svg viewBox="0 0 48 48" fill="none">
@@ -109,7 +98,6 @@
                     <h3 class="card-title">Automatización</h3>
                     <p class="card-desc">Sistemas que trabajan 24/7 mientras tú duermes</p>
                 </div>
-                
                 <div class="solution-card" data-animate="fade-up" data-delay="400">
                     <div class="card-icon">
                         <svg viewBox="0 0 48 48" fill="none">
@@ -153,7 +141,6 @@
                         </div>
                     </div>
                 </div>
-                
                 <div class="about-visual" data-animate="fade-left">
                     <div class="visual-card">
                         <div class="glow-effect"></div>
@@ -173,12 +160,12 @@
                 <div class="cta-glow"></div>
                 <h2 class="cta-title">¿Listo para escalar?</h2>
                 <p class="cta-text">Hablemos de tu proyecto. Sin compromisos, sin excusas.</p>
-                <a href="#" class="btn-primary">
+                <button class="btn-primary" id="openModal">
                     <span>Comenzar ahora</span>
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M5 12H19M12 5L19 12L12 19"/>
                     </svg>
-                </a>
+                </button>
             </div>
         </div>
     </section>
@@ -193,26 +180,84 @@
                     </a>
                     <p class="footer-tagline">Construimos el motor digital para que tu marca no deje de vender.</p>
                 </div>
-                
                 <div class="footer-links">
                     <h4>Enlaces</h4>
                     <a href="#inicio">Inicio</a>
                     <a href="#soluciones">Soluciones</a>
                     <a href="#sobre-nosotros">Sobre nosotros</a>
                 </div>
-                
                 <div class="footer-links">
                     <h4>Contacto</h4>
                     <a href="#">bleendcompanyoficial@gmail.com</a>
                     <a href="#">+1 809 xxx-xxxx</a>
                 </div>
             </div>
-            
             <div class="footer-bottom">
                 <p>&copy; 2026 Bleend. Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>
+
+    <!-- Modal -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal">
+            <button class="modal-close" id="closeModal">&times;</button>
+            <h3 class="modal-title">Quiero ser parte de Bleend</h3>
+            <div class="modal-message" id="modalMessage" contenteditable="false">
+                Hola, me interesa formar parte de Bleend. Quiero que mi marca escale con diseño, automatización e infraestructura de verdad. Estoy listo para dejar las excusas y obtener resultados reales. ¿Podemos hablar?
+            </div>
+            <div class="modal-actions">
+                <button class="modal-btn modal-btn-edit" id="editBtn">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/>
+                        <path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/>
+                    </svg>
+                    Editar
+                </button>
+                <button class="modal-btn modal-btn-copy" id="copyBtn">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                        <polyline points="22,6 12,13 2,6"/>
+                    </svg>
+                    Copiar y enviar
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Chatbot -->
+    <div class="chatbot-container" id="chatbot">
+        <div class="chatbot-window" id="chatbotWindow">
+            <div class="chatbot-header">
+                <div class="chatbot-avatar-mini">
+                    <div class="chatbot-eye-mini left"></div>
+                    <div class="chatbot-eye-mini right"></div>
+                </div>
+                <span class="chatbot-header-text">Bleend AI</span>
+                <button class="chatbot-close" id="closeChatbot">&times;</button>
+            </div>
+            <div class="chatbot-messages" id="chatMessages">
+                <div class="chatbot-message bot">
+                    <p>¡Hola! Soy el asistente de Bleend. ¿En qué puedo ayudarte hoy?</p>
+                </div>
+            </div>
+            <div class="chatbot-input-area">
+                <input type="text" class="chatbot-input" id="chatInput" placeholder="Escribe tu pregunta...">
+                <button class="chatbot-send" id="sendChat">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="22" y1="2" x2="11" y2="13"/>
+                        <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <button class="chatbot-btn" id="openChatbot">
+            <div class="chatbot-avatar">
+                <div class="chatbot-eye left"></div>
+                <div class="chatbot-eye right"></div>
+            </div>
+        </button>
+    </div>
 
     <script src="script.js"></script>
 </body>
