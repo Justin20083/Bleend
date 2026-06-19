@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bleend</title>
+    <link rel="icon" type="image/png" href="Logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Cursor glow effect -->
+    <div class="cursor-glow" id="cursorGlow"></div>
+    
+    <!-- Animated background particles -->
+    <canvas id="particles"></canvas>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <img src="Company.png" alt="Bleend Logo" class="logo-img">
+            </a>
+            
+            <div class="nav-links">
+                <a href="#inicio" class="nav-link active">Inicio</a>
+                <a href="#soluciones" class="nav-link">Soluciones</a>
+                <a href="#sobre-nosotros" class="nav-link">Sobre nosotros</a>
+            </div>
+            
+            <a href="#contacto" class="btn-cta">
+                <span class="btn-text">Escalar mi marca</span>
+                <span class="btn-shine"></span>
+            </a>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#inicio" class="mobile-link">Inicio</a>
+        <a href="#soluciones" class="mobile-link">Soluciones</a>
+        <a href="#sobre-nosotros" class="mobile-link">Sobre nosotros</a>
+        <a href="#contacto" class="btn-cta mobile-cta">Escalar mi marca</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="inicio">
+        <div class="hero-content">
+            <p class="operated-by" data-animate="fade-up">Operated by Bleend.</p>
+            
+            <div class="main-title-wrapper" data-animate="scale-in">
+                <h1 class="main-title">
+                    <span class="title-text">Construimos el motor <span class="title-highlight">digital</span></span>
+                    <span class="title-glow"></span>
+                </h1>
+            </div>
+            
+            <h2 class="subtitle" data-animate="fade-up" data-delay="200">
+                Para que tu marca no deje de vender.
+            </h2>
+            
+            <p class="description" data-animate="fade-up" data-delay="400">
+                Diseño, automatización e infraestructura para emprendedores que buscan resultados.<br>
+                No excusas.
+            </p>
+        </div>
+    </section>
+
+    <!-- Solutions Section -->
+    <section class="section solutions" id="soluciones">
+        <div class="section-container">
+            <p class="section-label" data-animate="fade-up">Nuestras soluciones</p>
+            <h2 class="section-title" data-animate="fade-up" data-delay="100">
+                Todo lo que necesitas para <span class="highlight">escalar</span>
+            </h2>
+            
+            <div class="solutions-grid">
+                <div class="solution-card" data-animate="fade-up" data-delay="200">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 48 48" fill="none">
+                            <rect x="4" y="8" width="40" height="32" rx="4" stroke="currentColor" stroke-width="2"/>
+                            <path d="M4 16H44" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="10" cy="12" r="2" fill="currentColor"/>
+                            <circle cx="16" cy="12" r="2" fill="currentColor"/>
+                            <circle cx="22" cy="12" r="2" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3 class="card-title">Diseño Web Premium</h3>
+                    <p class="card-desc">Interfaces modernas que convierten visitantes en clientes</p>
+                </div>
+                
+                <div class="solution-card" data-animate="fade-up" data-delay="300">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 48 48" fill="none">
+                            <path d="M24 4L44 14V34L24 44L4 34V14L24 4Z" stroke="currentColor" stroke-width="2"/>
+                            <path d="M24 14V34" stroke="currentColor" stroke-width="2"/>
+                            <path d="M14 19L34 29" stroke="currentColor" stroke-width="2"/>
+                            <path d="M34 19L14 29" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3 class="card-title">Automatización</h3>
+                    <p class="card-desc">Sistemas que trabajan 24/7 mientras tú duermes</p>
+                </div>
+                
+                <div class="solution-card" data-animate="fade-up" data-delay="400">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 48 48" fill="none">
+                            <path d="M8 24C8 15.2 15.2 8 24 8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M40 24C40 32.8 32.8 40 24 40" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <circle cx="24" cy="24" r="8" stroke="currentColor" stroke-width="2"/>
+                            <path d="M24 16V32" stroke="currentColor" stroke-width="2"/>
+                            <path d="M16 24H32" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3 class="card-title">Infraestructura</h3>
+                    <p class="card-desc">Base sólida para que tu negocio crezca sin límites</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about" id="sobre-nosotros">
+        <div class="section-container">
+            <div class="about-grid">
+                <div class="about-content" data-animate="fade-right">
+                    <p class="section-label">Sobre nosotros</p>
+                    <h2 class="section-title">
+                        No somos una agencia más.<br>
+                        <span class="highlight">Somos tu motor.</span>
+                    </h2>
+                    <p class="about-text">
+                        Bleend nació con una misión clara: eliminar las excusas y entregar resultados. 
+                        Combinamos diseño, automatización e infraestructura para crear sistemas que 
+                        realmente funcionan. Sin rodeos, sin promesas vacías.
+                    </p>
+                    <div class="stats-row">
+                        <div class="stat" data-animate="counter" data-target="98">
+                            <span class="stat-number">0</span>
+                            <span class="stat-label">% Satisfacción</span>
+                        </div>
+                        <div class="stat" data-animate="counter" data-target="24">
+                            <span class="stat-number">0</span>
+                            <span class="stat-label">/7 Soporte</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-visual" data-animate="fade-left">
+                    <div class="visual-card">
+                        <div class="glow-effect"></div>
+                        <div class="card-content">
+                            <span class="big-number">B</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section cta-section" id="contacto">
+        <div class="section-container">
+            <div class="cta-box" data-animate="scale-in">
+                <div class="cta-glow"></div>
+                <h2 class="cta-title">¿Listo para escalar?</h2>
+                <p class="cta-text">Hablemos de tu proyecto. Sin compromisos, sin excusas.</p>
+                <a href="#" class="btn-primary">
+                    <span>Comenzar ahora</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12H19M12 5L19 12L12 19"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <img src="Company.png" alt="Bleend Logo" class="logo-img">
+                    </a>
+                    <p class="footer-tagline">Construimos el motor digital para que tu marca no deje de vender.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Enlaces</h4>
+                    <a href="#inicio">Inicio</a>
+                    <a href="#soluciones">Soluciones</a>
+                    <a href="#sobre-nosotros">Sobre nosotros</a>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Contacto</h4>
+                    <a href="#">bleendcompanyoficial@gmail.com</a>
+                    <a href="#">+1 809 xxx-xxxx</a>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Bleend. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
